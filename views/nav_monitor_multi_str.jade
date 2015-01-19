@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Multi Nav Monitor
+        link(rel="stylesheet", href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+        //script(src="http://code.jquery.com/jquery-1.9.1.js")
+        //script(src="http://code.jquery.com/ui/1.10.4/jquery-ui.js")
+
+        script(src="/js/highstock.js")
+        script(src="/js/modules/exporting.js")
+        link(rel='stylesheet',href='/stylesheets/style.css')
+
+        script(type='text/javascript').
+            window.name = "#{name}";
+            window.market = "#{market}";
+            window.strategy = "#{strategy}";
+            window.model_nav = #{model_nav};
+            window.index_nav = #{index_nav};
+            window.strategy_codes_price = !{strategy_codes_price};
+            window.strategy_codes = !{strategy_codes};
+            // window.real_nav = #{real_nav};
+            // window.derking_nav = #{derking_nav};
+            window.future_spread = #{future_spread};
+            // window.model_nav_benson = #{model_nav_benson};
+
+        script(src="/js/lib/financial_formula.js")
+        script(src="/js/highchart_template/highchart_template.js")
+        script(src="/js/nav_monitor_multi_str.js")
+        script(src="/js/nav_monitor_multi_str_hist.js")
+    body
+        div(id="nav_monitor", style="height:1320px;width:100%;float:left;margin:40px 0px 0px 0px")
+        div(id="bias_figure", style="height:1480px;width:50%;float:left;margin:50px 0px 0px 0px")
+        div(id="bias_histogram", style="height:1040px;width:50%;float:left;margin:50px 0px 0px 0px")
+        
+
+
+

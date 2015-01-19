@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title dashboard
+        link(rel="stylesheet", href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+        //script(src="http://code.jquery.com/jquery-1.9.1.js")
+        //script(src="http://code.jquery.com/ui/1.10.4/jquery-ui.js")
+
+        script(src="/js/highstock.js")
+        script(src="/js/modules/exporting.js")
+        link(rel='stylesheet',href='/stylesheets/style.css')
+
+        script(type='text/javascript').
+            window.name = "#{name}";
+            window.data = #{data};
+            window.nav = #{nav};
+            window.mdd = #{mdd};
+            window.green_60 = #{green_60};
+            window.red_60 = #{red_60};
+            window.gray_60 = #{gray_60};
+            window.green_60_100 = #{green_60_100};
+            window.red_60_100 = #{red_60_100};
+            window.gray_60_100 = #{gray_60_100};
+            window.alpha_ratio = #{alpha_ratio};
+            window.pn_ratio_sma_20 = #{pn_ratio_sma_20};
+            window.index_cl_return_20 = #{index_cl_return_20};
+
+        script(src="/js/dashboard.js")
+
+    body
+        div(id="dashboard", style="height:800px")
+

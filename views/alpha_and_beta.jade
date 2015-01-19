@@ -1,0 +1,37 @@
+doctype html
+html
+    head
+        title Alpha and Beta Monitor
+        link(rel="stylesheet", href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+        //script(src="http://code.jquery.com/jquery-1.9.1.js")
+        //script(src="http://code.jquery.com/ui/1.10.4/jquery-ui.js")
+
+        script(src="/js/highstock.js")
+        script(src="/js/modules/exporting.js")
+        link(rel='stylesheet',href='/stylesheets/style.css')
+
+        script(type='text/javascript').
+            window.name = "#{name}";
+            window.date = "#{date}";
+            window.alpha_and_beta = !{alpha_and_beta};
+            window.port_alpha_and_beta = !{port_alpha_and_beta};
+            window.top_alpha_rank_data = !{top_alpha_rank_data};
+            window.top_rank_alpha_related_beta = !{top_rank_alpha_related_beta};
+            window.top_beta_rank_data = !{top_beta_rank_data};
+            window.top_rank_beta_related_alpha = !{top_rank_beta_related_alpha};
+            window.volatility = #{volatility};
+            window.index_pr = #{index_pr};
+            
+        script(src="/js/alpha_and_beta.js")
+        script(src="/js/lib/financial_formula.js")
+        script(src="/js/highchart_template/highchart_template.js")
+
+    body
+        div(id="volatility", style="height:640px;width:45%;float:left")
+        div(id="alpha_and_beta", style="height:640px;width:45%;")
+        div(id="top_alpha_rank", style="height:640px;width:45%;float:left;margin:60px 0 0 0")
+        div(id="top_beta_rank", style="height:640px;width:45%;margin:60px 0 0 0")
+        
+        
+

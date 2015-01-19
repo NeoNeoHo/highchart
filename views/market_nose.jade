@@ -1,0 +1,38 @@
+doctype html
+html
+    head
+        title Market Nose
+        link(rel="stylesheet", href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+        //script(src="http://code.jquery.com/jquery-1.9.1.js")
+        //script(src="http://code.jquery.com/ui/1.10.4/jquery-ui.js")
+
+        script(src="/js/highstock.js")
+        script(src="/js/modules/exporting.js")
+        link(rel='stylesheet',href='/stylesheets/style.css')
+
+        script(type='text/javascript').
+            window.name = "#{name}";
+            window.market = "#{market}";
+            // window.model_nav = #{model_nav};
+            window.index_nav = #{index_nav};
+            window.macd_forest_c = #{macd_forest_c};
+            window.index_wt = #{index_wt};
+            window.pool_alpha_count = #{pool_alpha_count};
+            window.vender_codes_price = !{vender_codes_price};
+            window.vender_codes = !{vender_codes};
+            // window.real_nav = #{real_nav};
+            // window.derking_nav = #{derking_nav};
+            // window.future_spread = #{future_spread};
+            // window.model_nav_benson = #{model_nav_benson};
+
+        script(src="/js/lib/financial_formula.js")
+        script(src="/js/highchart_template/highchart_template.js")
+        script(src="/js/market_nose.js")
+    body
+        div(id="market_nose", style="height:1800px;width:90%;margin:40px 0px 0px 0px")
+
+        
+
+
+

@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        title Typhoon
+        link(rel="stylesheet", href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css")
+        script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js")
+        script(src="http://code.highcharts.com/highcharts.js")
+        script(src="http://code.highcharts.com/highcharts-more.js")
+        //- script(src="/js/highstock.js")
+        script(src="/js/modules/exporting.js")
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+        script(type='text/javascript').
+            window.name = "#{name}";
+            window.typhoon = #{typhoon};
+            window.typhoon_last_month = #{typhoon_last_month};
+            window.typhoon_short_last_month = #{typhoon_short_last_month};
+            window.slope1 = #{slope1};
+            window.slope2 = #{slope2};
+            window.x_std_line = #{x_std_line};       
+            window.y_std_line = #{y_std_line};     
+            window.text_std1 = #{text_std1};       
+            window.text_std2 = #{text_std2};          
+            window.date = "#{date}";
+
+        script(src="/js/typhoon.js")
+
+    body
+        div(id="typhoon_container", style="height:960px;width:1200px")
